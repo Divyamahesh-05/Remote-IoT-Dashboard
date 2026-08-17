@@ -53,8 +53,8 @@ Remote-IoT-Dashboard
 │ └── flows.json
 │
 ├── Screenshots
-│ ├── motor-control.png
-│ ├── motor-monitoring.png
+│ ├── motor-group-control.png
+│ ├── motor-monitoring.jpeg
 │ └── valve-control.png
 │
 └── README.md
@@ -87,7 +87,7 @@ Node-RED/flows.json
 This section provides motor scheduling and automation features.
 
 
-![Motor Group Control](Screenshots/motor-control.png)
+![Motor Group Control](Screenshots/motor-group-control.png)
 
 
 
@@ -102,7 +102,7 @@ Features:
 - Remote control
 
 
-![Motor Monitoring](Screenshots/motor-monitoring.png)
+![Motor Monitoring](Screenshots/motor-monitoring.jpeg)
 
 
 
