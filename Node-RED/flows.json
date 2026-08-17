@@ -1,0 +1,948 @@
+[
+    {
+        "id": "4977cfd7ff0d7e8b",
+        "type": "tab",
+        "label": "Motor + Valves (working)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "28c76073b0437cfc",
+        "type": "group",
+        "z": "4977cfd7ff0d7e8b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "038deff5886745e0",
+            "2907062e70a657fe",
+            "442d9823cff69737",
+            "dd552fa2a8764b17",
+            "b9353866cffc8e2c",
+            "3ef9d51acc8d145c"
+        ],
+        "x": 14,
+        "y": 2579,
+        "w": 2032,
+        "h": 202
+    },
+    {
+        "id": "4ed8797852494be2",
+        "type": "group",
+        "z": "4977cfd7ff0d7e8b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "cb7f6b98a61188ce",
+            "efb4d6e245550dad",
+            "46ddc342692d5f2b",
+            "339eb754.bf1e98",
+            "f85bb6fddcb0331c"
+        ],
+        "x": 14,
+        "y": 2099,
+        "w": 1392,
+        "h": 162
+    },
+    {
+        "id": "292fc0200fc49904",
+        "type": "group",
+        "z": "4977cfd7ff0d7e8b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "cfb72266b8c15a20",
+            "72cde786f0804b6a",
+            "e88e361ee82a5a0e",
+            "7303ef3d78de8022",
+            "6ce6bd98958d3ff4",
+            "cf355cf8385b8f92",
+            "aabad7586891ccd0",
+            "3fb4df9dc8279757"
+        ],
+        "x": 14,
+        "y": 1659,
+        "w": 1972,
+        "h": 262
+    },
+    {
+        "id": "d6d65e5c877684e8",
+        "type": "group",
+        "z": "4977cfd7ff0d7e8b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1fa084e8f7242585",
+            "722f4a1bc452663a",
+            "57de599ef29071fc",
+            "783a951ba0a7d09c",
+            "44e7f4ac4cfb7271"
+        ],
+        "x": 14,
+        "y": 1339,
+        "w": 1112,
+        "h": 202
+    },
+    {
+        "id": "0bf92e1d136d7df1",
+        "type": "group",
+        "z": "4977cfd7ff0d7e8b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b9cf16044e36d03b",
+            "c0a280f96eed4812",
+            "d80899116204f95c",
+            "ef36672b5e39e38d",
+            "d8e04258d7b8fa46",
+            "ba08e664e8287311",
+            "77f2d9dc7dd72594"
+        ],
+        "x": -6,
+        "y": 659,
+        "w": 2352,
+        "h": 209.5
+    },
+    {
+        "id": "b9cf16044e36d03b",
+        "type": "exec",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "command": "python3 /home/pi/Lora_transmit/lora_transmit.py",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Run Python",
+        "x": 950,
+        "y": 820,
+        "wires": [
+            [
+                "c0a280f96eed4812",
+                "d8e04258d7b8fa46",
+                "77f2d9dc7dd72594"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c0a280f96eed4812",
+        "type": "ui_text",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "group": "group_display",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "Status Display",
+        "label": "Device Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "12",
+        "color": "#0dc55c",
+        "x": 2200,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d80899116204f95c",
+        "type": "ui_template",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "group": "group_display",
+        "name": "Motor Image",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "format": "<script>\n(function(scope) {\n    // Initialize with defaults\n    scope.motorState = false;\n    scope.disabled = false;\n\n    // Watch for incoming messages\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n\n        // Case 1: Initial state restore (payload = { motorState: true/false })\n        if (typeof msg.payload === 'object' && typeof msg.payload.motorState === 'boolean') {\n            scope.motorState = msg.payload.motorState;\n            scope.disabled = false;\n        }\n\n        // Case 2: Motor state update from backend (payload = true/false)\n        else if (msg.rc.code === 0 && typeof msg.payload === 'boolean') {\n            scope.motorState = msg.payload;\n            scope.disabled = false;\n        }\n    });\n\n    // Toggle motor\n    scope.toggleMotor = function() {\n        if (scope.disabled) return;\n        scope.disabled = true;\n\n        const desired = !scope.motorState;\n\n        // Send motor command\n        scope.send({\n            motorRequest: true,\n            desiredState: desired,\n            commandMeta: {\n                type: \"motor\",\n                state: desired\n            }\n        });\n    };\n})(scope);\n</script>\n\n<div style=\"display: flex; align-items: center; gap: 15px; margin-bottom: 0px;\">\n\n    <div style=\"display: flex; flex-direction: column; align-items: center;\">\n        <img\n            ng-src=\"{{ motorState ? '/images/motor_on.png' : '/images/motor_off.png' }}\"\n            style=\"width: 100px; transition: filter 0.3s ease;\"\n        />\n        <div style=\"margin-top: 5px; font-weight: bold;\">Motor 1</div>\n    </div>\n\n    <md-switch \n        ng-checked=\"motorState\"\n        ng-click=\"toggleMotor()\"\n        ng-disabled=\"disabled\"\n        aria-label=\"Motor Power\">\n        {{ motorState ? \"ON\" : \"OFF\" }}\n    </md-switch>\n</div>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 90,
+        "y": 820,
+        "wires": [
+            [
+                "ef36672b5e39e38d"
+            ]
+        ]
+    },
+    {
+        "id": "cfb72266b8c15a20",
+        "type": "ui_dropdown",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "Valve Selector",
+        "label": "Select Valve Group",
+        "tooltip": "",
+        "place": "",
+        "group": "group_display",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Show Valves",
+                "value": "show_valves",
+                "type": "str"
+            },
+            {
+                "label": "Hide Valves",
+                "value": "hide_valves",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 1480,
+        "y": 1860,
+        "wires": [
+            [
+                "72cde786f0804b6a"
+            ]
+        ]
+    },
+    {
+        "id": "72cde786f0804b6a",
+        "type": "ui_template",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "group": "group_display",
+        "name": "Valve Buttons Template",
+        "order": 5,
+        "width": 6,
+        "height": "11",
+        "format": "<script>\n(function(scope) {\n    scope.valveStates = scope.valveStates || {\n        VALVE1_TOGGLE: false,\n        VALVE2_TOGGLE: false,\n        VALVE3_TOGGLE: false,\n        VALVE4_TOGGLE: false,\n        VALVE5_TOGGLE: false,\n        VALVE6_TOGGLE: false\n    };\n\n    scope.endTimes = scope.endTimes || {\n        VALVE1_END: \"\",\n        VALVE2_END: \"\",\n        VALVE3_END: \"\",\n        VALVE4_END: \"\",\n        VALVE5_END: \"\",\n        VALVE6_END: \"\"\n    };\n\n    scope.pendingValve = null;\n\n    function formatTimeForInput(dateOrString) {\n        let d = new Date(dateOrString);\n        if (isNaN(d)) return \"\";\n        let hh = d.getHours().toString().padStart(2, '0');\n        let mm = d.getMinutes().toString().padStart(2, '0');\n        return `${hh}:${mm}`;\n    }\n\n    scope.formatDisplayTime = function(timeStr) {\n        if (!timeStr || typeof timeStr !== \"string\") return \"\";\n        if (/^\\d{2}:\\d{2}$/.test(timeStr)) return timeStr;\n        let d = new Date(timeStr);\n        if (isNaN(d)) return \"\";\n        let hh = d.getHours().toString().padStart(2, '0');\n        let mm = d.getMinutes().toString().padStart(2, '0');\n        return `${hh}:${mm}`;\n    };\n\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n        if (msg.payload.valveStates) {\n            Object.assign(scope.valveStates, msg.payload.valveStates);\n            scope.pendingValve = null;\n        }\n\n        if (msg.payload.endTimes) {\n            Object.keys(msg.payload.endTimes).forEach(key => {\n                scope.endTimes[key] = formatTimeForInput(msg.payload.endTimes[key]);\n            });\n        }\n\n        // Backend confirmed state\n        if (msg.rc.code ==0 && typeof msg.payload === 'boolean' &&  msg.valve ) {  //typeof msg.payload === 'boolean' &&\n            scope.valveStates[msg.valve] = msg.payload;\n            scope.pendingValve = null;\n        }\n\n    });\n\n    scope.toggleValve = function(valveKey) {\n        const valveIndex = valveKey.match(/\\d+/)[0];\n        const endTimeKey = `VALVE${valveIndex}_END`;\n        const currentState = scope.valveStates[valveKey];\n        const endTime = scope.endTimes[endTimeKey];\n\n        if (!currentState) { // turning ON\n            if (!endTime) {\n                alert(\"Please select end time before turning ON Valve \" + valveIndex);\n                return;\n            }\n        } else {\n            scope.endTimes[endTimeKey] = \"\";\n        }\n\n        scope.pendingValve = valveKey;\n\n        // Do not update UI state directly — wait for backend confirmation\n\n        let commandKey;\n        switch (valveKey) {\n            case 'VALVE4_TOGGLE': commandKey = 'v5'; break;\n            case 'VALVE5_TOGGLE': commandKey = 'v6'; break;\n            case 'VALVE6_TOGGLE': commandKey = 'v4'; break;\n            default: commandKey = 'v' + valveIndex;\n        }\n\n        scope.send({\n            valve: valveKey,\n            command: commandKey,\n            state: !currentState,\n            end_time: endTime,\n            commandMeta: {\n                type: \"valve\",\n                valve: valveKey,\n                state: !currentState,\n                end_time: endTime\n            }\n        });\n    };\n\n    scope.getValveStyle = function(valveKey) {\n        const state = scope.valveStates[valveKey];\n        const pending = scope.pendingValve === valveKey;\n        if (pending) {\n            return { filter: 'grayscale(100%) brightness(0.5)' };\n        }\n        return state\n            ? { filter: 'brightness(0) sepia(1) hue-rotate(90deg) saturate(5) drop-shadow(0 0 5px green)' }\n            : { filter: 'brightness(0) sepia(1) hue-rotate(0deg) saturate(5) drop-shadow(0 0 5px red)' };\n    };\n})(scope);\n</script>\n\n<style>\n.valve-row {\n    display: flex;\n    flex-direction: column;\n    margin-bottom: 25px;\n}\n.valve-control {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n}\n.valve-image {\n    width: 50px;\n    height: 50px;\n    transition: filter 0.3s ease;\n}\n.end-time-display {\n    margin-left: 75px;\n    color: #444;\n    font-style: italic;\n    font-size: 0.9em;\n    margin-top: 6px;\n}\n</style>\n\n<div>\n  <div ng-repeat=\"i in [1,2,3,4,5,6]\" class=\"valve-row\">\n    <div class=\"valve-control\">\n      <img\n        src=\"/images/icons8-valve-64.png\"\n        ng-style=\"getValveStyle('VALVE'+i+'_TOGGLE')\"\n        class=\"valve-image\"\n      />\n      <md-switch\n        ng-checked=\"valveStates['VALVE'+i+'_TOGGLE']\"\n        ng-click=\"toggleValve('VALVE'+i+'_TOGGLE')\"\n        aria-label=\"Valve {{i}}\">\n        Valve {{i}} - {{ valveStates['VALVE'+i+'_TOGGLE'] ? 'ON' : 'OFF' }}\n      </md-switch>\n      <input\n        type=\"time\"\n        ng-model=\"endTimes['VALVE'+i+'_END']\"\n        aria-label=\"End time for Valve {{i}}\"\n        style=\"padding: 5px; border-radius: 4px; width: 110px;\"\n      />\n    </div>\n    <div class=\"end-time-display\"\n         ng-if=\"valveStates['VALVE'+i+'_TOGGLE'] && endTimes['VALVE'+i+'_END']\">\n      Selected End Time: {{ formatDisplayTime(endTimes['VALVE'+i+'_END']) }}\n    </div>\n  </div>\n</div>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 910,
+        "y": 1860,
+        "wires": [
+            [
+                "e88e361ee82a5a0e"
+            ]
+        ]
+    },
+    {
+        "id": "e88e361ee82a5a0e",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "Build Python String",
+        "func": "// const { valve, command, state, end_time } = msg;\n\n// // Handle initial valve state request\n// if (msg.initValveRequest) {\n//     const savedValveStates = flow.get(\"valveStates\") || {};\n//     msg.payload = { initValveStates: savedValveStates };\n//     return msg;\n// }\n\n// // Validate input\n// if (!valve || !command) {\n//     node.warn(\"Missing valve or command\");\n//     return null;\n// }\n\n// // ❌ Do NOT update state if command failed\n// if (typeof msg.payload === \"string\" && msg.payload.includes(\"Command failed\")) {\n//     node.warn(\"Command failed. Valve state not updated.\");\n//     return msg;\n// }\n\n// // ✅ Load current valve states\n// let valveStates = flow.get(\"valveStates\") || {};\n\n// // Count how many valves are ON\n// const onCount = Object.values(valveStates).filter(v => v).length;\n// const motorState = flow.get(\"motor3State\") || false;\n// // 🔁 Intercept valve OFF when it's the last ON valve\n// if (state === false && valveStates[valve] === true && onCount === 1 && motorState === true) {\n//     // Store valve OFF request to flow\n//     flow.set(\"pendingValveOff\", {\n//         valve,\n//         command,\n//         end_time\n//     });\n\n//     // Send motor OFF command instead\n//     return {\n//         payload: \"MGSTMAC1 m3_off\",\n//         motorRequest: true,\n//         desiredState: false,\n//         commandMeta: {\n//             type: \"motor\",\n//             state: false\n//         }\n//     };\n// }\n\n// // ✅ Continue normally for other cases\n\n// // Save new valve state\n// valveStates[valve] = state;\n// flow.set(\"valveStates\", valveStates);\n\n// // Build action string\n// const action = `${command}_${state ? \"on\" : \"off\"}`;\n\n// // Format time if ON\n// let timeOnly = \"\";\n// if (state && end_time) {\n//     try {\n//         const d = new Date(end_time);\n//         const hh = d.getHours().toString().padStart(2, '0');\n//         const mm = d.getMinutes().toString().padStart(2, '0');\n//         timeOnly = `${hh}:${mm}`;\n//     } catch (err) {\n//         node.warn(\"Invalid end_time format\");\n//     }\n// }\n\n// // Build final command string\n// msg.payload = timeOnly\n//     ? `MGSTMAC1 ${action} ${timeOnly}`\n//     : `MGSTMAC1 ${action}`;\n\n// return msg;\nconst { valve, command, state, end_time } = msg;\n\n// Handle initial valve state request\nif (msg.initValveRequest) {\n    const savedValveStates = flow.get(\"valveStates\") || {};\n    msg.payload = { initValveStates: savedValveStates };\n    return msg;\n}\n\n// Validate input\nif (!valve || !command) {\n    node.warn(\"Missing valve or command\");\n    return null;\n}\n\n// ❌ Do NOT update state if command failed\nif (typeof msg.payload === \"string\" && msg.payload.includes(\"Command failed\")) {\n    node.warn(\"Command failed. Valve state not updated.\");\n    return msg;\n}\n\n// ✅ Load current valve states\nlet valveStates = flow.get(\"valveStates\") || {};\nnode.warn(valveStates);\n// Count how many valves are ON\nconst onCount = Object.values(valveStates).filter(v => v).length;\nconst motorState = flow.get(\"motorState\") || false;\nnode.warn(onCount);\n// 🔁 Intercept valve OFF when it's the last ON valve\nif (state === false && valveStates[valve] === true && onCount === 1 && motorState === true) {\n\n    // Send motor OFF command instead\n    return {\n        payload: \"MGSTMAC0 m1_off\",\n        motorRequest: true,\n        desiredState: false,\n        commandMeta: {\n            type: \"motor\",\n            state: false\n        }\n    };\n}\n\n// ✅ Continue normally for other cases\n\n// ⛏️ Strip any \"_on\" or \"_off\" suffix before appending new state\nconst baseCommand = command.replace(/_on$|_off$/i, \"\");\nconst action = `${baseCommand}_${state ? \"on\" : \"off\"}`;\n\n// Format time if ON\nlet timeOnly = \"\";\nif (state && end_time) {\n    try {\n        const d = new Date(end_time);\n        const hh = d.getHours().toString().padStart(2, '0');\n        const mm = d.getMinutes().toString().padStart(2, '0');\n        timeOnly = `${hh}:${mm}`;\n    } catch (err) {\n        node.warn(\"Invalid end_time format\");\n    }\n}\n// if(msg.topic == \"group_msg\"){\n//     timeOnly = msg.end_time;\n// }\n// Final command string\nmsg.payload = timeOnly\n    ? `MGSTMAC1 ${action} ${timeOnly}`\n    : `MGSTMAC1 ${action}`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1870,
+        "y": 1880,
+        "wires": [
+            [
+                "b9cf16044e36d03b"
+            ]
+        ]
+    },
+    {
+        "id": "1fa084e8f7242585",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "d6d65e5c877684e8",
+        "name": "state maintain",
+        "func": "msg.payload = {\n  valveStates: flow.get(\"valveStates\") || {\n    VALVE1_TOGGLE: false,\n    VALVE2_TOGGLE: false,\n    VALVE3_TOGGLE: false,\n    VALVE4_TOGGLE: false,\n    VALVE5_TOGGLE: false,\n    VALVE6_TOGGLE: false\n  },\n  endTimes: flow.get(\"endTimes\") || {\n    VALVE1_END: \"\",\n    VALVE2_END: \"\",\n    VALVE3_END: \"\",\n    VALVE4_END: \"\",\n    VALVE5_END: \"\",\n    VALVE6_END: \"\"\n  }\n};\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 1500,
+        "wires": [
+            [
+                "72cde786f0804b6a"
+            ]
+        ]
+    },
+    {
+        "id": "ef36672b5e39e38d",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "name": "Motor_payload",
+        "func": "const desiredState = msg.desiredState;\nconst valveId = \"MGSTMAC0\";\nconst command = desiredState ? \"m1_on\" : \"m1_off\";\n\nmsg.commandMeta = msg.commandMeta || { type: \"motor\", state: desiredState };\nmsg.payload = `${valveId} ${command}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 820,
+        "wires": [
+            [
+                "b9cf16044e36d03b"
+            ]
+        ]
+    },
+    {
+        "id": "d8e04258d7b8fa46",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "name": "Response for both",
+        "func": "// Unified response handler for motor and valve\nconst output = msg.payload;\nconst meta = msg.commandMeta;\n\nif (msg.rc && msg.rc.code === 0 && output.includes(\"Command:\")) {\n    if (meta && meta.type === \"motor\") {\n        flow.set(\"motorState\", meta.state);\n        msg.payload = { motorState: meta.state };\n        return [msg, null];  // Motor toggle update\n    }\n    if (meta && meta.type === \"motor2\") {\n        flow.set(\"motor2State\", meta.state);\n        msg.payload = { motor2State: meta.state };\n        return [msg, null];  // Send motor2 state to UI (output 1)\n    }\n    if (meta && meta.type === \"valve\") {\n        const valveKey = meta.valve;\n        const endTime = meta.end_time || \"\";\n    \n        let valveStates = flow.get(\"valveStates\") || {};\n        valveStates[valveKey] = meta.state;\n        flow.set(\"valveStates\", valveStates);\n    \n        let endTimes = flow.get(\"endTimes\") || {};\n        endTimes[valveKey.replace(\"_TOGGLE\", \"_END\")] = endTime;\n        flow.set(\"endTimes\", endTimes);\n    \n        msg.payload = {\n            valveStates: valveStates,\n            endTimes: endTimes\n        };\n        const motorState = flow.get(\"motorState\") || false;\n        const valvesOn = Object.values(valveStates).filter(v => v).length;\n    \n        // ✅ Always update valve state (output 1)\n        node.send([msg, null]);\n    \n        // ✅ Trigger motor ON only if valve is turned ON and motor is OFF\n        if (meta.state === true && valvesOn === 1 && motorState === false) {\n            return [null, {\n                motorRequest: true,\n                desiredState: true,\n                commandMeta: {\n                    type: \"motor\",\n                    state: true\n                }\n            }];\n        }\n    \n        return null;\n    }\n}\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 820,
+        "wires": [
+            [
+                "d80899116204f95c",
+                "783a951ba0a7d09c",
+                "72cde786f0804b6a"
+            ],
+            [
+                "ef36672b5e39e38d"
+            ]
+        ]
+    },
+    {
+        "id": "722f4a1bc452663a",
+        "type": "ui_ui_control",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "d6d65e5c877684e8",
+        "name": "UI Reload Listener",
+        "events": "all",
+        "x": 130,
+        "y": 1400,
+        "wires": [
+            [
+                "57de599ef29071fc",
+                "1fa084e8f7242585"
+            ]
+        ]
+    },
+    {
+        "id": "57de599ef29071fc",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "d6d65e5c877684e8",
+        "name": "Restore Motor State",
+        "func": "msg.payload = {\n  motorState: flow.get(\"motorState\") || false,\n  motor2State: flow.get(\"motor2State\") || false\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 1380,
+        "wires": [
+            [
+                "d80899116204f95c",
+                "783a951ba0a7d09c"
+            ]
+        ]
+    },
+    {
+        "id": "783a951ba0a7d09c",
+        "type": "ui_template",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "d6d65e5c877684e8",
+        "group": "group_display",
+        "name": "Motor 2 Image",
+        "order": 6,
+        "width": 6,
+        "height": 3,
+        "format": "<script>\n(function(scope) {\n    // Initialize with defaults\n    scope.motor2State = false;\n    scope.disabled2 = false;\n\n    // Watch for incoming messages\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n\n        // Case 1: Initial state restore\n        if (msg.rc.code === 0 && typeof msg.payload === 'object' && typeof msg.payload.motor2State === 'boolean') {\n            scope.motor2State = msg.payload.motor2State;\n            scope.disabled2 = false;\n        }\n\n        // Case 2: Simple boolean update\n        else if (msg.rc.code === 0 && typeof msg.payload === 'boolean') {\n            scope.motor2State = msg.payload;\n            scope.disabled2 = false;\n        }\n    });\n\n    // Toggle motor 2\n    scope.toggleMotor2 = function() {\n        if (scope.disabled2) return;\n        scope.disabled2 = true;\n\n        const desired = !scope.motor2State;\n\n        scope.send({\n            motor2Request: true,\n            desiredState: desired,\n            commandMeta: {\n                type: \"motor2\",\n                state: desired\n            }\n        });\n    };\n})(scope);\n</script>\n\n<div style=\"display: flex; align-items: center; gap: 15px; margin-bottom: 0px;\">\n    <div style=\"display: flex; flex-direction: column; align-items: center;\">\n        <img\n            ng-src=\"{{ motor2State ? '/images/motor_on.png' : '/images/motor_off.png' }}\"\n            style=\"width: 100px; transition: filter 0.3s ease;\"\n        />\n        <div style=\"margin-top: 5px; font-weight: bold;\">Motor 2</div>\n    </div>\n\n    <md-switch \n        ng-checked=\"motor2State\"\n        ng-click=\"toggleMotor2()\"\n        ng-disabled=\"disabled2\"\n        aria-label=\"Motor 2 Power\">\n        {{ motor2State ? \"ON\" : \"OFF\" }}\n    </md-switch>\n</div>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": ".motor2-style {     background-color: #f7faff;     border: 1px solid #cce3f5;     border-radius: 12px;     padding: 15px;     margin-top: 10px;     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }  .motor2-style .motor-label {     font-weight: bold;     font-size: 18px;     color: #333;     margin-bottom: 8px; }",
+        "x": 800,
+        "y": 1380,
+        "wires": [
+            [
+                "44e7f4ac4cfb7271"
+            ]
+        ]
+    },
+    {
+        "id": "44e7f4ac4cfb7271",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "d6d65e5c877684e8",
+        "name": "Motor2_payload",
+        "func": "const desiredState = msg.desiredState;\nconst motorId = \"MGSTMAC0\";\nconst command = desiredState ? \"m2_on\" : \"m2_off\";\n\nmsg.commandMeta = msg.commandMeta || { type: \"motor2\", state: desiredState };\nmsg.payload = `${motorId} ${command}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1020,
+        "y": 1380,
+        "wires": [
+            [
+                "b9cf16044e36d03b"
+            ]
+        ]
+    },
+    {
+        "id": "ba08e664e8287311",
+        "type": "mqtt out",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "name": "",
+        "topic": "end_time1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "02e88764144e2de6",
+        "x": 2250,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "77f2d9dc7dd72594",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "0bf92e1d136d7df1",
+        "name": "Timer_sent",
+        "func": "let valve = msg.valve;\nlet command = msg.command;\nlet state = msg.state;\nlet endTimeISO = msg.end_time;\n\nif (msg.rc && msg.rc.code === 0) {\n    // ✅ 1. Valve is ON → return HH:mm time\n    if (\"valve\" in msg && state === true) {\n        let endDate = new Date(endTimeISO);\n        let hours = endDate.getHours().toString().padStart(2, '0');\n        let minutes = endDate.getMinutes().toString().padStart(2, '0');\n        let endTimeFormatted = `${hours}:${minutes}`;\n\n        msg.topic = \"end_time\";  // 🌟 TOPIC 1 for valve\n        msg.payload = {\n            valve: valve,\n            command: command,\n            state: state,\n            end_time: endTimeFormatted,\n            motor_id:\"MGSTMAC0\"\n        };\n\n        node.warn(\"✅ Valve is ON, returning formatted time payload\");\n        return msg;\n    }\n\n    // ✅ 2. Motor is OFF → Check if any valve still ON\n    const meta = msg.commandMeta;\n    if (meta && meta.type === \"motor\" && meta.state === false) {\n        const valveStates = flow.get(\"valveStates\") || {};\n        const endTimes = flow.get(\"endTimes\") || {};\n\n        const stillOnValve = Object.entries(valveStates)\n            .find(([_, state]) => state === true);\n\n        if (stillOnValve) {\n            const [valveKey] = stillOnValve;\n            const shortCmd = valveKey.replace(\"VALVE\", \"v\").replace(\"_TOGGLE\", \"\").toLowerCase();  // v1, v2...\n            const end_time_str = new Date().toISOString();\n\n            node.warn(`⚠️ Motor OFF but valve ${valveKey} is still ON. Sending valve OFF.`);\n\n            const valveOffPayload = {\n                topic: \"valve_off\",  // 🌟 TOPIC 2 for motor-triggered valve OFF\n                valve: valveKey,\n                command: `${shortCmd}_off`,\n                state: false,\n                end_time: end_time_str,\n                commandMeta: {\n                    type: \"valve\",\n                    valve: valveKey,\n                    state: false,\n                    end_time: end_time_str\n                },\n                socketid: \"from_python_test\",\n                _msgid: \"simulate_12345\"\n            };\n            return [null,valveOffPayload];  // Return both UI msg and command msg\n        }\n\n        return [msg, null];\n    }\n}\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 820,
+        "wires": [
+            [
+                "ba08e664e8287311"
+            ],
+            [
+                "7303ef3d78de8022"
+            ]
+        ]
+    },
+    {
+        "id": "7303ef3d78de8022",
+        "type": "change",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "Payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "valve",
+                "pt": "msg",
+                "to": "payload.valve",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "payload.command",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "state",
+                "pt": "msg",
+                "to": "payload.state",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "end_time",
+                "pt": "msg",
+                "to": "payload.end_time",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "commandMeta",
+                "pt": "msg",
+                "to": "payload.commandMeta",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "socketid",
+                "pt": "msg",
+                "to": "payload.socketid",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "_msgid",
+                "pt": "msg",
+                "to": "payload._msgid",
+                "tot": "msg"
+            }
+        ],
+        "x": 1160,
+        "y": 1720,
+        "wires": [
+            [
+                "e88e361ee82a5a0e"
+            ]
+        ]
+    },
+    {
+        "id": "6ce6bd98958d3ff4",
+        "type": "mqtt in",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "from Python Scheduler",
+        "topic": "end_time2",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "cc6ae09e95e1eb39",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 140,
+        "y": 1720,
+        "wires": [
+            [
+                "cf355cf8385b8f92"
+            ]
+        ]
+    },
+    {
+        "id": "cf355cf8385b8f92",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "Timer_off",
+        "func": "// Check if payload has motor_id\nif (!msg.payload || msg.payload.motor_id !== \"MGSTMAC0\") {\n    return null;  // Block message\n}\n\n// If valid motor_id, pass to change node\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 1700,
+        "wires": [
+            [
+                "7303ef3d78de8022"
+            ]
+        ]
+    },
+    {
+        "id": "cb7f6b98a61188ce",
+        "type": "ui_template",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "4ed8797852494be2",
+        "group": "group_display",
+        "name": "Motor Voltage Display",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "format": "<div\n  style=\"font-family: sans-serif; padding: 10px; margin-top: 0px; background-color: #f7f7f7; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);\">\n  <table style=\"width: 100%; border-collapse: collapse; text-align: center;\">\n    <thead>\n      <tr style=\"background-color: #e0e0e0;\">\n        <th>Phase</th>\n        <th>Voltage (V)</th>\n        <th>Current (A)</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>R</td>\n        <td style=\"color: red;\">{{msg.payload.voltage.R}}</td>\n        <td style=\"color: red;\">{{msg.payload.current.R}}</td>\n      </tr>\n      <tr>\n        <td>Y</td>\n        <td style=\"color: orange;\">{{msg.payload.voltage.Y}}</td>\n        <td style=\"color: orange;\">{{msg.payload.current.Y}}</td>\n      </tr>\n      <tr>\n        <td>B</td>\n        <td style=\"color: blue;\">{{msg.payload.voltage.B}}</td>\n        <td style=\"color: blue;\">{{msg.payload.current.B}}</td>\n      </tr>\n    </tbody>\n  </table>\n  <p style=\"margin-top: 10px;\">Pressure: {{msg.payload.pressure}} bar</p>\n  <p>\n    Status:\n    <span style=\"color: {{msg.payload.fault ? 'red' : 'green'}};\">\n      {{msg.payload.fault ? 'FAULT' : 'OK'}}\n    </span>\n    |\n    Power:\n    <span style=\"color: {{msg.payload.power ? 'green' : 'gray'}};\">\n      {{msg.payload.power ? 'ON' : 'OFF'}}\n    </span>\n  </p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1280,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "efb4d6e245550dad",
+        "type": "mqtt in",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "4ed8797852494be2",
+        "name": "",
+        "topic": "test_channel",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "98c8e168.b6e64",
+        "inputs": 0,
+        "x": 110,
+        "y": 2180,
+        "wires": [
+            [
+                "339eb754.bf1e98"
+            ]
+        ]
+    },
+    {
+        "id": "46ddc342692d5f2b",
+        "type": "ui_template",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "4ed8797852494be2",
+        "group": "group_display",
+        "name": "Motor 2 Voltage Display",
+        "order": 7,
+        "width": "6",
+        "height": "5",
+        "format": "<div\n  style=\"font-family: sans-serif; padding: 10px; margin-top: 0px; background-color: #f7f7f7; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);\">\n  <table style=\"width: 100%; border-collapse: collapse; text-align: center;\">\n    <thead>\n      <tr style=\"background-color: #e0e0e0;\">\n        <th>Phase</th>\n        <th>Voltage (V)</th>\n        <th>Current (A)</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>R</td>\n        <td style=\"color: red;\">{{msg.payload.voltage.R}}</td>\n        <td style=\"color: red;\">{{msg.payload.current.R}}</td>\n      </tr>\n      <tr>\n        <td>Y</td>\n        <td style=\"color: orange;\">{{msg.payload.voltage.Y}}</td>\n        <td style=\"color: orange;\">{{msg.payload.current.Y}}</td>\n      </tr>\n      <tr>\n        <td>B</td>\n        <td style=\"color: blue;\">{{msg.payload.voltage.B}}</td>\n        <td style=\"color: blue;\">{{msg.payload.current.B}}</td>\n      </tr>\n    </tbody>\n  </table>\n  <p style=\"margin-top: 10px;\">Pressure: {{msg.payload.pressure}} bar</p>\n  <p>\n    Status:\n    <span style=\"color: {{msg.payload.fault ? 'red' : 'green'}};\">\n      {{msg.payload.fault ? 'FAULT' : 'OK'}}\n    </span>\n    |\n    Power:\n    <span style=\"color: {{msg.payload.power ? 'green' : 'gray'}};\">\n      {{msg.payload.power ? 'ON' : 'OFF'}}\n    </span>\n  </p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "339eb754.bf1e98",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "4ed8797852494be2",
+        "name": "",
+        "func": "let raw = typeof msg.payload === 'string' ? msg.payload : msg.payload.toString();\nraw = raw.trim();\n\nnode.warn(\"Incoming: \" + raw);\n\n// ✅ Output containers\nlet out1 = null;  // m1 data\nlet out2 = null;  // m2 data\nlet out3 = null;  // power OFF alert\nlet out4 = null;  // fault-triggered OFF\n\n// ✅ Power OFF Handling: \"MGSTMAC0/poweroff\"\nif (raw.includes(\"|poweroff\")) {\n    const [source, rest] = raw.split(\"|\");\n    if (source.trim() === \"MGSTMAC0\") {\n        node.warn(\"⚠️ Power OFF detected on MGSTMAC0\");\n\n        out3 = {\n            headers: {\n                \"Content-Type\": \"application/x-www-form-urlencoded\"\n            },\n            payload: {\n                chat_id: \"1078248575\",\n                text: \"⚠️ Power OFF detected on MGSTMAC0\"\n            }\n        };\n        return [null, null, out3, null];\n    }\n    return [null, null, null, null];\n}\n\n// ✅ Parse motor data\nlet [sourcePart, dataPart] = raw.replace(\"Incoming: \", \"\").split(\"|%\");\nif (!sourcePart || !dataPart || !dataPart.includes(\"/\") || !dataPart.includes(\"m\")) {\n    return [null, null, null, null];\n}\n\nlet core = dataPart.split('/')[0];\nlet parts = core.split(';');\n\n// ✅ Validate motor data format\nif (parts.length !== 10 || !/^m\\d+$/.test(parts[0])) {\n    return [null, null, null, null];\n}\n\nlet payload = {\n    type: \"motor\",\n    source: sourcePart.trim(),\n    motor_id: parts[0],\n    voltage: { R: +parts[1], Y: +parts[2], B: +parts[3] },\n    current: { R: +parts[4], Y: +parts[5], B: +parts[6] },\n    pressure: +parts[7],\n    fault: +parts[8],\n    power: +parts[9]\n};\n\n// ✅ Handle motor routing only for MGSTMAC0\nif (payload.source === \"MGSTMAC0\") {\n    msg.payload = payload;\n\n    if (payload.motor_id === \"m1\") {\n        out1 = msg;\n\n        // Check for fault in m1\n        const motorState = flow.get(\"motorState\") || false;\n        if (payload.fault > 0 && motorState === true) {\n            flow.set(\"motorState\", false);  // Turn off state\n\n            out4 = {\n                payload: \"MGSTMAC0 m1_off\",\n                motorRequest: true,\n                desiredState: false,\n                commandMeta: {\n                    type: \"motor\",\n                    state: false\n                }\n            };\n\n            out3 = {\n                headers: {\n                    \"Content-Type\": \"application/x-www-form-urlencoded\"\n                },\n                payload: {\n                    chat_id: \"1078248575\",\n                    text: \"⚠️ Fault occurred in motor m1. Motor turned OFF automatically.\"\n                }\n            };\n        }\n\n    } else if (payload.motor_id === \"m2\") {\n        out2 = msg;\n    }\n}\n\nreturn [out1, out2, out3, out4];\n",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2180,
+        "wires": [
+            [
+                "cb7f6b98a61188ce"
+            ],
+            [
+                "46ddc342692d5f2b"
+            ],
+            [
+                "f85bb6fddcb0331c"
+            ],
+            [
+                "ef36672b5e39e38d"
+            ]
+        ]
+    },
+    {
+        "id": "f85bb6fddcb0331c",
+        "type": "http request",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "4ed8797852494be2",
+        "name": "Send to Telegram",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.telegram.org/bot7645684070:AAHUME59t9bKIrC2eC4vGuRSAsPj9cRbdV8/sendMessage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 870,
+        "y": 2220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aabad7586891ccd0",
+        "type": "mqtt in",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "MQTT IN from Python Scheduler",
+        "topic": "group_msg",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "cc6ae09e95e1eb39",
+        "inputs": 0,
+        "x": 170,
+        "y": 1860,
+        "wires": [
+            [
+                "3fb4df9dc8279757"
+            ]
+        ]
+    },
+    {
+        "id": "3fb4df9dc8279757",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "292fc0200fc49904",
+        "name": "on_Successfrom_RPI",
+        "func": "// Split MQTT payload\nconst parts = (msg.payload || \"\").split(\";\");\nif (parts.length !== 4) {\n    node.warn(\"Invalid input format. Expected: MGSTMAC0;valve_8;16:48\");\n    return null;\n}\n\nlet motor_id = parts[0].trim();              // MGSTMAC0\nlet valveRaw = parts[1].trim();              // valve_8\nlet endTimeStr = parts[2].trim();            // 16:48\nlet state = parts[3].trim();\nnode.warn(state);\n// Convert valve_8 → VALVE8_TOGGLE\nconst valveNumber = valveRaw.match(/\\d+/);\nif (!valveNumber) {\n    node.warn(\"Invalid valve format. Expected something like 'valve_8'\");\n    return null;\n}\nconst valveToUpdate = `VALVE${valveNumber[0]}_TOGGLE`;\nconst endTimeKey = `VALVE${valveNumber[0]}_END`;\n\n// Get flow state\nlet valveStates = flow.get(\"valveStates\") || {};\nlet endTimes = flow.get(\"endTimes\") || {};\n\n// Set new state\nconst newState = state.toLowerCase() === \"true\";\nvalveStates[valveToUpdate] = newState;\n\n// Convert \"16:48\" → ISO date\nconst now = new Date();\nconst [hh, mm] = endTimeStr.split(\":\").map(Number);\nnow.setHours(hh);\nnow.setMinutes(mm);\nnow.setSeconds(0);\nnow.setMilliseconds(0);\nconst formattedEndTime = now.toISOString();\n\n// Update end time\nendTimes[endTimeKey] = formattedEndTime;\n\n// Save to flow context\nflow.set(\"valveStates\", valveStates);\nflow.set(\"endTimes\", endTimes);\n\n// Send message to UI\nmsg.payload = {\n    data: \"group\",\n    valveStates: {\n        [valveToUpdate]: newState\n    },\n    endTimes: {\n        [endTimeKey]: formattedEndTime\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1860,
+        "wires": [
+            [
+                "72cde786f0804b6a"
+            ]
+        ]
+    },
+    {
+        "id": "038deff5886745e0",
+        "type": "ui_template",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "28c76073b0437cfc",
+        "group": "group_display",
+        "name": "Create Group Button",
+        "order": 999,
+        "width": 6,
+        "height": "10",
+        "format": "<script>\n  (function(scope) {\n    if (!scope.initialized) {\n        scope.initialized = true;\n\n        scope.groups = [];\n        scope.valveStates = scope.valveStates || {};\n        scope.showGroupPanel = false;\n        scope.groupName = '';\n        scope.startTime = '';\n        scope.duration = '';\n\n        scope.valvesSelected = {\n            VALVE1: false,\n            VALVE2: false,\n            VALVE3: false,\n            VALVE4: false,\n            VALVE5: false,\n            VALVE6: false\n        };\n\n        scope.days = {\n            Monday: false,\n            Tuesday: false,\n            Wednesday: false,\n            Thursday: false,\n            Friday: false,\n            Saturday: false,\n            Sunday: false\n        };\n\n        scope.getSelectedValves = function () {\n            return Object.keys(scope.valvesSelected).filter(v => scope.valvesSelected[v]);\n        };\n\n        scope.getSelectedDays = function () {\n            return Object.keys(scope.days).filter(d => scope.days[d]);\n        };\n\n        scope.editingIndex = -1;\n\n        scope.saveGroup = function () {\n            const name = scope.groupName?.trim();\n            const dur = scope.duration?.toString().trim();\n            const startTime=scope.startTime;\n            const originalValves = scope.getSelectedValves();\n            const remappedValves = originalValves.map(v => {\n                switch (v) {\n                    case 'VALVE4': return 'VALVE5';\n                    case 'VALVE5': return 'VALVE6';\n                    case 'VALVE6': return 'VALVE4';\n                    default: return v;\n                }\n            });\n            const valves = scope.getSelectedValves();\n            const days = scope.getSelectedDays();\n            if (!name) {\n                alert(\"❗ Please enter a group name.\");\n                return;\n            }\n            if (!startTime) {\n                alert(\"⏰ Please select a start time.\");\n                return;\n            }\n            if (!dur || isNaN(parseInt(dur)) || parseInt(dur) <= 0) {\n                alert(\"⏱️ Please enter a valid duration in minutes.\");\n                return;\n            }\n        \n            if (valves.length === 0) {\n                alert(\"🚰 Please select at least one valve.\");\n                return;\n            }\n        \n            if (days.length === 0) {\n                alert(\"📅 Please select at least one day.\");\n                return;\n            }\n\n            const time = new Date(startTime).toLocaleTimeString('en-GB', { hour12: false,hour: '2-digit',minute: '2-digit', timeZone: 'Asia/Kolkata' });\n            console.log(time); // Output: 05:48:00\n            // const valves = scope.getSelectedValves();\n            // const days = scope.getSelectedDays();\n            const newGroup = {\n                groupName: name,\n                startTime: time, \n                duration: dur,\n                valves:remappedValves,\n                days,\n                isOn: false,\n                showValves: false,\n                motor_id:\"MGSTMAC0\",\n                index:scope.editingIndex >= 0 ? scope.editingIndex : scope.groups.length\n            };\n\n            if (scope.editingIndex >= 0) {\n                // Update existing group\n                scope.groups[scope.editingIndex] = newGroup;\n                scope.send({ payload: { action: \"update_group\", group: newGroup, index: scope.editingIndex } });\n                scope.editingIndex = -1;\n            } else {\n                // Save new group\n                scope.groups.push(newGroup);\n                scope.send({ payload: { action: \"save_group\", group: newGroup } });\n            }\n\n            // Reset form\n            scope.groupName = '';\n            scope.startTime = '';\n            scope.duration = '';\n            Object.keys(scope.valvesSelected).forEach(k => scope.valvesSelected[k] = false);\n            Object.keys(scope.days).forEach(k => scope.days[k] = false);\n            scope.showGroupPanel = false;\n        };\n\n        scope.editGroup = function (index) {\n            const group = scope.groups[index];\n            scope.groupName = group.groupName;\n            scope.startTime = group.startTime;\n            scope.duration = group.duration;\n\n            Object.keys(scope.valvesSelected).forEach(k => {\n                scope.valvesSelected[k] = group.valves.includes(k);\n            });\n\n            Object.keys(scope.days).forEach(k => {\n                scope.days[k] = group.days.includes(k);\n            });\n\n            scope.editingIndex = index;\n            scope.showGroupPanel = true;\n        };\n\n        scope.deleteGroup = function (index) {\n            const group = scope.groups[index];\n            scope.groups.splice(index, 1);\n            scope.send({ payload: { action: \"delete_group\", index: index,groupName: group.groupName,motor_id: group.motor_id } });\n        };\n        scope.toggleStatus = function(group, index) {\n            group.isOn = !group.isOn; // toggle status\n            scope.send({ payload: { action: \"toggle_status\", index: index,groupName: group.groupName, isOn: group.isOn } });\n        };\n\n        // scope.$watch('msg', function (msg) {\n        //     if (msg && msg.payload && msg.payload.groups) {\n        //         scope.groups = msg.payload.groups;\n        //         scope.$applyAsync();\n        //     }\n        // });\n        scope.$watch('msg', function (msg) {\n            if (!msg || !msg.payload) return;\n        \n            if (msg.payload.groups) {\n                scope.groups = msg.payload.groups;\n            }\n        \n            if (msg.payload.valveStates) {\n                scope.valveStates = msg.payload.valveStates;\n            }\n            if (msg.payload.action === \"toggle_status\" && typeof msg.payload.index === \"number\") {\n                if (scope.groups[msg.payload.index]) {\n                    scope.groups[msg.payload.index].isOn = msg.payload.isOn;\n                }\n            }\n            scope.$applyAsync();\n        });\n    }\n})(scope);\n</script>\n\n<!--✅ CREATE GROUP BUTTON -->\n<div style=\"text-align:center; padding:10px;\">\n  <md-button class=\"md-raised md-primary\" ng-click=\"showGroupPanel = true\">\n    ✅ Create Group\n  </md-button>\n</div>\n\n<!-- ✅ GROUP CREATION FORM -->\n<div ng-if=\"showGroupPanel\"\n  style=\"border:1px solid #ccc; padding:15px; margin-top:10px; border-radius:10px; background:#f9f9f9;\">\n  <label><strong>Group Name:</strong></label><br>\n  <input type=\"text\" ng-model=\"$parent.groupName\" placeholder=\"Enter group name\" style=\"width:100%; padding:5px;\"><br><br>\n  <label><strong>Start Time:</strong></label><br>\n  <input type=\"time\" ng-model=\"$parent.startTime\" style=\"width:100%; padding:5px;\"><br><br>\n\n  <label><strong>Duration (mins):</strong></label><br>\n  <input type=\"number\" ng-model=\"$parent.duration\" placeholder=\"Enter duration\" style=\"width:100%; padding:5px;\"><br><br>\n\n  <label><strong>Select Days:</strong></label>\n  <div style=\"margin-left: 15px;\">\n    <div ng-repeat=\"(day, selected) in days\">\n      <label><input type=\"checkbox\" ng-model=\"days[day]\"> {{ day }}</label><br>\n    </div>\n  </div><br>\n\n  <label><strong>Select Valves:</strong></label>\n  <div style=\"margin-left: 15px;\">\n    <div ng-repeat=\"(valve, selected) in valvesSelected\">\n      <label><input type=\"checkbox\" ng-model=\"valvesSelected[valve]\"> {{ valve }}</label><br>\n    </div>\n  </div><br>\n\n  <md-button class=\"md-raised md-accent\" ng-click=\"saveGroup()\">💾 Save Group</md-button>\n</div>\n\n<!--✅ DISPLAY CREATED GROUPS -->\n<div ng-if=\"groups.length > 0\" style=\"margin-top: 10px;\">\n  <h3>📋 Created Groups</h3>\n  <div ng-repeat=\"group in groups\" style=\"border: 1px solid #ccc; padding: 10px; margin: 5px 0; border-radius: 10px;\">\n    <div style=\"text-align: center;\">\n      <md-button ng-click=\"toggleStatus(group, $index)\" class=\"md-raised\" ng-style=\"{\n                 'background-color': 'white',\n                 'color': group.isOn ? '#4CAF50' : '#F44336',\n                 'border': '2px solid ' + (group.isOn ? '#4CAF50' : '#F44336')\n               }\">\n        {{ group.isOn ? '🟢 ON' : '🔴 OFF' }}\n      </md-button>\n    </div>\n    <strong>Group Name:</strong> {{ group.groupName || 'N/A' }} <br>\n    <strong>Start Time:</strong> {{ group.startTime || 'N/A' }} <br>\n    <strong>Duration:</strong> {{ group.duration || 'N/A' }} mins <br>\n    <strong>Days:</strong> {{ group.days.join(', ') }} <br>\n    <!--<strong>Valves:</strong> {{ group.valves.join(', ') }}-->\n\n    <br><br>\n    <div style=\"display: flex; justify-content: space-between; gap: 10px; margin-top: 10px; align-items: center;\">\n      <div style=\"flex: 1;\">\n        <md-button class=\"md-raised md-warn\"\n          style=\"width: 100%; height: 40px; display: flex; align-items: center; justify-content: center;\"\n          ng-click=\"deleteGroup($index)\">\n          🗑️ DELETE\n        </md-button>\n      </div>\n      <div style=\"flex: 1;\">\n        <md-button class=\"md-raised md-primary\"\n          style=\"width: 100%; height: 40px; display: flex; align-items: center; justify-content: center;\"\n          ng-click=\"editGroup($index)\">\n          ✏️ EDIT\n        </md-button>\n      </div>\n    </div>\n    <md-button class=\"md-raised md-default\" ng-click=\"group.showValves = !group.showValves\" style=\"margin: 10px 0;\">\n      {{ group.showValves ? 'Hide Valves' : 'Show Valves' }}\n    </md-button><br>\n    <div ng-if=\"group.showValves\" style=\"display: flex; gap: 10px; margin: 8px 0;\">\n      <div ng-repeat=\"valve in group.valves\" style=\"text-align: center;\">\n        <img\n          src=\"/images/icons8-valve-64.png\"\n          ng-style=\"valveStates[valve + '_TOGGLE'] \n            ? { filter: 'brightness(0) sepia(1) hue-rotate(90deg) saturate(5) drop-shadow(0 0 5px green)' } \n            : { filter: 'brightness(0) sepia(1) hue-rotate(0deg) saturate(5) drop-shadow(0 0 5px red)' }\"\n          style=\"width: 30px; height: 30px;\"\n          alt=\"{{ valve }}\"\n        />\n        <div style=\"font-size: 12px;\">{{ valve }}</div>\n      </div>\n    </div>\n\n    <!-- <md-button class=\"md-raised md-warn\" ng-click=\"deleteGroup($index)\">🗑️ Delete</md-button>\n    <md-button class=\"md-raised\" ng-click=\"editGroup($index)\">✏️ Edit</md-button> -->\n  </div>\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1180,
+        "y": 2740,
+        "wires": [
+            [
+                "2907062e70a657fe",
+                "dd552fa2a8764b17"
+            ]
+        ]
+    },
+    {
+        "id": "2907062e70a657fe",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "28c76073b0437cfc",
+        "name": "Grp_state",
+        "func": "let groups = flow.get(\"groups\") || [];\n\nif (msg.payload && msg.payload.action === \"save_group\") {\n    groups.push(msg.payload.group);\n    flow.set(\"groups\", groups);\n    return null;\n}\n\nif (msg.payload && msg.payload.action === \"update_group\") {\n    groups[msg.payload.index] = msg.payload.group;\n    flow.set(\"groups\", groups);\n    return null;\n}\n\nif (msg.payload && msg.payload.action === \"delete_group\") {\n    groups.splice(msg.payload.index, 1);\n    flow.set(\"groups\", groups);\n    return null;\n}\nif (msg.payload && msg.payload.action === \"toggle_status\") {\n    const index = msg.payload.index;\n    const isOn = msg.payload.isOn;\n\n    if (groups[index]) {\n        groups[index].isOn = isOn;  // ✅ update isOn state\n        flow.set(\"groups\", groups); // ✅ persist updated state\n    }\n    return null;\n}\n// msg.payload = { groups };\nmsg.payload = {\n    groups: flow.get(\"groups\") || [],\n    valveStates: flow.get(\"valveStates\") || {}\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2720,
+        "wires": [
+            [
+                "038deff5886745e0"
+            ]
+        ]
+    },
+    {
+        "id": "442d9823cff69737",
+        "type": "ui_ui_control",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "28c76073b0437cfc",
+        "name": "UI Reload Listener",
+        "events": "all",
+        "x": 130,
+        "y": 2620,
+        "wires": [
+            [
+                "2907062e70a657fe"
+            ]
+        ]
+    },
+    {
+        "id": "dd552fa2a8764b17",
+        "type": "mqtt out",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "28c76073b0437cfc",
+        "name": "",
+        "topic": "end_time1",
+        "qos": "",
+        "retain": "",
+        "broker": "cc6ae09e95e1eb39",
+        "x": 1950,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "b9353866cffc8e2c",
+        "type": "function",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "28c76073b0437cfc",
+        "name": "Grp_toggle",
+        "func": "let valveStates = flow.get(\"valveStates\") || {};\nlet motorState = flow.get(\"motor3State\") || false;\nlet msgPayload = msg.payload;\n\n// 🧹 Clean payload if motor_id is MGSTMAC0\nif (msgPayload && msgPayload.motor_id === \"MGSTMAC0\") {\n    delete msgPayload.motor_id;\n}\n\n// 🚦 If it's a toggle_status action and turned ON\nif (msgPayload.action === \"toggle_status\" && msgPayload.isOn === true) {\n    const valvesOn = Object.values(valveStates).filter(v => v === true || v === \"True\").length;\n\n    // ✅ Always update UI state (output 1)\n    node.send([msg, null]);\n\n    // ✅ If first valve turned ON & motor is OFF, request motor ON\n    if (motorState === false) {\n        return [null, {\n            motorRequest: true,\n            desiredState: true,\n            commandMeta: {\n                type: \"motor\",\n                state: true\n            }\n        }];\n    }\n\n    return null;  // no motor action\n}\n\n// ✅ Otherwise, just forward the message to output 1\nreturn [msg, null];\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 2740,
+        "wires": [
+            [
+                "038deff5886745e0",
+                "2907062e70a657fe"
+            ],
+            [
+                "ef36672b5e39e38d"
+            ]
+        ]
+    },
+    {
+        "id": "3ef9d51acc8d145c",
+        "type": "mqtt in",
+        "z": "4977cfd7ff0d7e8b",
+        "g": "28c76073b0437cfc",
+        "name": "MQTT IN from Python Scheduler",
+        "topic": "grp_toggle",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "cc6ae09e95e1eb39",
+        "inputs": 0,
+        "x": 170,
+        "y": 2740,
+        "wires": [
+            [
+                "b9353866cffc8e2c"
+            ]
+        ]
+    },
+    {
+        "id": "group_display",
+        "type": "ui_group",
+        "name": "Motor & Valves",
+        "tab": "tab_display",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "02e88764144e2de6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "cc6ae09e95e1eb39",
+        "type": "mqtt-broker",
+        "name": "test",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "98c8e168.b6e64",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "Local_server_lora_TNpalayam",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "tab_display",
+        "type": "ui_tab",
+        "name": "Control Panel",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "7f0b3eb2af846ecb",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.5"
+        }
+    }
+]
