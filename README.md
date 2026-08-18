@@ -95,6 +95,18 @@ The Node-RED flow is responsible for:
 
 Node-RED flow file:
 
+## Python IoT Controller
+
+A Raspberry Pi based Python controller is used for field device automation.
+
+Responsibilities:
+- LoRa based motor and valve communication
+- MQTT message handling
+- Cyclic irrigation scheduling
+- Automatic ON/OFF control
+- Telegram based event notifications
+- Device response handling
+
 
 
 # Dashboard Screenshots
