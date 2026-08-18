@@ -125,3 +125,17 @@ Features:
 
 
 Cloudflare Tunnel is used to provide secure remote access to the Raspberry Pi hosted dashboard without router port forwarding.
+
+## System Architecture
+
+The system architecture describes the remote access and IoT communication flow.
+
+Users can access the dashboard from anywhere through a GitHub Pages web application. The Cloudflare Tunnel provides secure access to the Node-RED dashboard running on Raspberry Pi.
+
+The active tunnel URL is stored in Firebase Realtime Database and retrieved by the web application.
+
+Node-RED handles device control, LoRa communication, MQTT messaging, and real-time dashboard updates. Device status is directly updated through LoRa communication without API polling.
+
+### Architecture Diagram
+
+[View Architecture Diagram](Documentation/architecture.pdf)
