@@ -134,6 +134,10 @@ Users can access the dashboard from anywhere through a GitHub Pages web applicat
 
 The active tunnel URL is stored in Firebase Realtime Database and retrieved by the web application.
 
+## MQTT Communication Flow
+
+![MQTT Communication Flow](Documentation/mqtt-communication-flow.png)
+
 Node-RED handles device control, LoRa communication, MQTT messaging, and real-time dashboard updates. Device status is directly updated through LoRa communication without API polling.
 
 ### Architecture Diagram
