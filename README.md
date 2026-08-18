@@ -2,45 +2,63 @@
 
 ## Overview
 
-This project is a remote IoT monitoring and control dashboard developed using Raspberry Pi and Node-RED.
+This project is a Raspberry Pi-based remote IoT monitoring and control dashboard developed using Node-RED.
 
-The dashboard enables remote monitoring and control of field devices such as motors and valves through a web-based interface.
+The system enables users to monitor and control connected IoT devices through a web-based interface. Node-RED running on Raspberry Pi acts as the edge application layer, handling device communication, automation logic, command processing, and real-time dashboard updates.
 
-The system uses Node-RED workflows for device communication, automation logic, and dashboard visualization.
+The solution provides secure remote access using Cloudflare Tunnel, allowing users to access the dashboard from anywhere without requiring router port forwarding.
+
+Device status updates are processed directly through communication responses and maintained using Node-RED context storage for real-time visualization without API polling.
 
 ---
 
 ## Features
 
-- Remote motor ON/OFF control
-- Valve control and monitoring
-- Real-time device status monitoring
-- Motor scheduling and automation
-- Group-based device control
-- MQTT-based communication
-- Node-RED dashboard interface
-- Secure remote access using Cloudflare Tunnel
+### Remote Device Control
+- Remote ON/OFF control for connected devices.
+- Valve and motor control through Node-RED dashboard.
+- User-friendly web interface for device operation.
+
+### Real-Time Monitoring
+- Live device status monitoring.
+- Real-time dashboard updates based on received device data.
+- Maintains latest device states using Node-RED context storage.
+
+### Node-RED Automation
+- Developed Node-RED workflows for:
+  - Device communication
+  - Command processing
+  - Automation logic
+  - Dashboard visualization
+
+### MQTT Communication
+- Implemented MQTT-based messaging for IoT device communication.
+- Supports publish and subscribe based command handling.
+- Processes device commands and status messages.
+
+### Remote Access
+- Configured Cloudflare Tunnel for secure remote dashboard access.
+- Enables access from anywhere without public IP configuration or port forwarding.
 
 ---
 
 ## Technologies Used
 
-### Hardware
+### Hardware / Edge Platform
 - Raspberry Pi
-- STM32-based IoT Controllers
-- Motor Control Modules
-- Valve Control Modules
-- Sensors
+- IoT Communication Modules
+- Connected Field Devices
 
-### Software
+### Software & Communication
 - Node-RED
 - MQTT
 - JavaScript
 - Python
 - Cloudflare Tunnel
 
-### Monitoring
+### Data & Monitoring
 - Node-RED Dashboard
+- Node-RED Context Storage
 - Grafana
 - InfluxDB
 
@@ -57,25 +75,26 @@ Remote-IoT-Dashboard
 │ ├── motor-monitoring.jpeg
 │ └── valve-control.png
 │
+├── Documentation
+│ ├── architecture.pdf
+│ └── mqtt-communication-flow.png
+│
 └── README.md
-
+---
 
 # Node-RED Flow
 
-The Node-RED flow handles:
+The Node-RED flow is responsible for:
 
 - MQTT message processing
 - Device command handling
 - Motor and valve control logic
+- Automation workflows
 - Dashboard data processing
 - Real-time device status updates
 
-Flow file:
-Node-RED/flows.json
+Node-RED flow file:
 
-
-
----
 
 
 # Dashboard Screenshots
