@@ -59,8 +59,6 @@ Device status updates are processed directly through communication responses and
 ### Data & Monitoring
 - Node-RED Dashboard
 - Node-RED Context Storage
-- Grafana
-- InfluxDB
 
 ---
 
@@ -69,6 +67,8 @@ Remote-IoT-Dashboard
 
 ├── Node-RED
 │ └── flows.json
+├── Python
+│ └── irrigation_controller.py
 │
 ├── Screenshots
 │ ├── motor-group-control.png
